@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#d50000</color>
+    <color name="colorAppBackground">#ffffff</color>
+    <color name="colorList">#E0E0E0</color>
+    <color name="colorDateTime">#515151</color>
+    <color name="colorControlActivated">#5bcbff</color>
+    <color name="colorControlHighlight">#ff685f</color>
+    <color name="btn_pressed_color">#ff6868</color>
+    <color name="btn_focused_color">#6b70ff</color>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppBackground"
+    android:onClick="hideKeyboard">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="com.example.sadmansakib.todo.MainActivity">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/TITLE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Title"
+                android:textSize="20dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/DETAILS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Details"
+                android:textSize="20dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Choose Date"
+                android:textColor="#dde2dd"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/DATE"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_button"
+                android:drawablePadding="-20dp"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:onClick="showDatePickerDialog"
+                android:text="PICK DATE"
+                android:textColor="#000"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Choose Time"
+                android:textColor="#dde2dd"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/TIME"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_button"
+                android:drawablePadding="-20dp"
+                android:drawableStart="@android:drawable/ic_menu_recent_history"
+                android:onClick="showTimePickerDialog"
+                android:text="PICK TIME"
+
+                android:textColor="#000"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <Switch
+            android:id="@+id/notification_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="40dp"
+            android:switchMinWidth="70dp"
+            android:switchPadding="20dp"
+            android:text=" Set Notification Alarm"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/SaveOrUpdateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_states"
+            android:onClick="saveToDo"
+            android:text="SAVE"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="109dp"
+        app:srcCompat="@mipmap/todo"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Add ToDo"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp" />
+</RelativeLayout>

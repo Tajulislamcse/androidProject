@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--the shadow comes from here-->
+    <item
+        android:bottom="0dp"
+        android:drawable="@android:drawable/dialog_holo_light_frame"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp"
+        >
+
+    </item>
+
+    <!--whatever you want in the background, here i preferred solid white -->
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorList" />
+            <corners android:bottomRightRadius="4dp"
+                android:bottomLeftRadius="4dp"
+                android:topRightRadius="4dp"
+                android:topLeftRadius="4dp"/>
+            <gradient
+                android:startColor="#c4c3c3"
+                android:centerColor="#ede9e9"
+                android:endColor="#c4c3c3"
+                android:angle="90" />
+
+
+        </shape>
+
+
+    </item>
+
+
+</layer-list>
